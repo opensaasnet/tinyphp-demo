@@ -20,7 +20,8 @@
 		"ignores" : {},
 		"global": "./librarys/global/",
 		"namespaces": {
-			"Demo": "./librarys/"
+			"Demo": "./librarys/",
+			"Demo\\Common": "./librarys/common/"
 		},
 		"static": {
 			"web": true,

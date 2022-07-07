@@ -13,7 +13,7 @@
  namespace Demo\Controller;
  
  use Tiny\MVC\Controller\Controller;
-use App\Model\Main\UserInfo;
+use Demo\Model\UserInfo;
 use Tiny\MVC\Web\HttpCookie;
 use Tiny\MVC\Request\Param\Get;
 use Tiny\Cache\Storager\PHP;
@@ -22,7 +22,7 @@ use Tiny\Lang\Lang;
 use Tiny\MVC\Web\HttpSession;
 use Tiny\MVC\View\View;
 use Tiny\Net\IpArea;
-use App\Model\Main\User\UserInfoByRedis;
+use Demo\Model\User\UserInfoByRedis;
 use Tiny\Cache\Cache;
 use Demo\Common\Example;
                                                  
@@ -68,7 +68,7 @@ use Demo\Common\Example;
       * @param HttpSession $session Session操作实例
       * @param View $view 视图操作实例
       */
-     public function indexAction(Get $get,Lang $lang, HttpSession $session, HttpCookie $cookie, \App\Model\Main\User\UserInfo $userinfoModel, Configuration $config, Cache $cache, \Example $gexample, Example $cexample)
+     public function indexAction(Get $get,Lang $lang, HttpSession $session, HttpCookie $cookie, \Demo\Model\User\UserInfoByRedis $userinfoModel, Configuration $config, Cache $cache, \Example $gexample, Example $cexample)
      {
          // session
          if (!$session['example']) {
@@ -94,6 +94,7 @@ use Demo\Common\Example;
          $isName = $this->request->get->isRequired('name') ? 'true' : 'false';
          
          $userInfo = $userinfoModel->getUsers();
+         $userInfo = array_merge($userInfo, $this->userinfoModel->getUsers());
          
          // cached
          $cached = $cache->get('aa');
