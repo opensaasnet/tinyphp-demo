@@ -1,0 +1,40 @@
+{
+	"name": "tinyphp-demo",
+	"namespace": "Demo",
+	"desc": "tinyphp的demo模块",
+	"type": "module",
+	"version": "1.0.0",
+	"init": true,
+	"index": "./src",
+	"setting" : {},
+	"routes": [
+		{
+			"route" : "pathinfo",
+			"rule": {
+			    "checkRegex" : "#^/(demo)#",
+				 "values": {}
+	    }
+		}
+	],
+	"autoloader": {
+		"ignores" : {},
+		"global": "./librarys/global/",
+		"namespaces": {
+			"Demo": "./librarys/"
+		},
+		"static": {
+			"web": true,
+			"paths": []
+		}		
+	},
+	"config": true,
+	"lang": true,
+	"eventlistener": [
+		{
+			"class" :"Demo\\Event\\Bootstrap",
+			"priority": 0
+		}
+	],
+	"require": {
+	}
+}

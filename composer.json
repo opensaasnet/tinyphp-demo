@@ -1,0 +1,18 @@
+{
+    "name": "tinycn/tinyphp-demo",
+    "description": "tinyphp的demo模块",
+    "type" : "module",
+    "author" : {
+    	"name" : "Da.Jin",
+    	"email" : "da.jin@tinyphp.org"
+    },
+    "require" : {
+     	"php" : ">7.3"
+    },
+    "autoload":{
+    "psr-4" : {}
+    },
+    "timeout" : 1000000,
+    "repositories": {
+    }
+}

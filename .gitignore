@@ -1,0 +1,17 @@
+.buildpath
+.project
+*.log
+.idea
+.git
+*/.pid
+*.txt
+.settings
+.DS_Store
+*.phar
+/application/runtime/*
+*/public/setting
+public/.htaccess
+public/nginx.htaccess
+*/public/profile
+composer.lock
+/application/config/profile.php
