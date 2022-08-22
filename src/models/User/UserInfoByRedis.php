@@ -51,7 +51,11 @@ class UserInfoByRedis extends Redis
         $users = $this->userinfoModel->getUsers();
         $ht = $this->createHashTable(self::HAST_USERINFO_ID);
         $ht->set($users);
-        return $ht->getAll();
+        $rets = $ht->getAll();
+        if (!$rets) {
+            return [];
+        }
+        return $rets;
     }
 }
 ?>
