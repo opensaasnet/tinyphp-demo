@@ -20,7 +20,9 @@ use Tiny\MVC\Application\ApplicationBase;
 
 /**
  * 当前应用的引导类程序
- *
+ * 
+ * @autowired
+ * 
  * @package App.Event
  * @since 2021年8月31日上午11:19:50
  * @final 2022年7月4日下午3:05:35

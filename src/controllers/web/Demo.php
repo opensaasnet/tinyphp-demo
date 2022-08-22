@@ -40,9 +40,9 @@ use Demo\Common\Example;
       *
       * @autowired
       *
-      * @var UserInfo
+      * @var \Demo\Model\UserInfo
       */
-     protected UserInfo $userinfoModel;
+     protected $userinfoModel;
      
      /**
       * 

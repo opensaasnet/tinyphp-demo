@@ -40,7 +40,7 @@ class UserInfoByRedis extends Redis
      * 
      * @var UserInfo
      */
-    protected UserInfo $userinfoModel;
+    protected $userinfoModel;
     
     /**
      * get userinfo
